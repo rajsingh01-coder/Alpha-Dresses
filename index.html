@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alpha Dress Shop</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+  <div class="over">
+    <nav class="bg-gray-800 text-white shadow-lg fixed top-0 w-full z-10">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="flex justify-between h-16">
+              <div class="flex items-center">
+                  <a href="#" class="text-xl font-bold">ALPHA DRESSES</a>
+              </div>
+              <div id="menu" class="hidden md:flex space-x-4 items-center">
+                  <a href="#home" class="hover:text-gray-300">Home</a>
+                  <a href="#shop" class="hover:text-gray-300">Shop</a>
+                  <a href="#collection" class="hover:text-gray-300">Collections</a>
+                  <a href="#about" class="hover:text-gray-300">About Us</a>
+                  <a href="#contact" class="hover:text-gray-300">Contact</a>
+              </div>
+              <div class="flex items-center space-x-4">
+                  <a href="login.html" class="hover:text-gray-300">Login</a>
+                  <a href="#contact">
+                      <button class="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded">Sign Up</button>
+                  </a>
+              </div>
+              <button id="menu-toggle" class="md:hidden text-gray-300 hover:text-white focus:outline-none focus:text-white">
+                  <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"/>
+                  </svg>
+              </button>
+          </div>
+      </div>
+  </nav>
+  <script>
+    const menu = document.getElementById("menu");
+    const toggle = document.getElementById("menu-toggle");
+    const menuItems = menu.querySelectorAll("a");
+
+    // Toggle menu visibility when the toggle button is clicked
+    toggle.addEventListener("click", () => {
+        menu.classList.toggle("hidden");
+    });
+
+    // Close menu when a menu item is clicked
+    menuItems.forEach(item => {
+        item.addEventListener("click", () => {
+            if (!menu.classList.contains("hidden")) {
+                menu.classList.add("hidden");
+            }
+        });
+    });
+</script>
+
+    <section class="hero" id="home">
+        <div class="hero-animation text"> Hello Sir <br> "Discover the perfect blend of style and comfort at our dress website! We offer a curated collection of dresses for every occasion, from casual outings to elegant evening events. Explore our range of trendy designs, vibrant colors, and premium fabrics that cater to all tastes and preferences. Whether you're looking for chic summer dresses, classic formal wear, or versatile day-to-night outfits, we have something special for you. With user-friendly navigation and secure checkout, shopping with us is seamless and enjoyable. Redefine your wardrobe with our latest arrivals and enjoy exclusive deals. Step into style—your perfect dress awaits!"</div>
+        <div class="hero-content">
+          <h1>Discover Your Style</h1>
+          <p>Explore our wide range of fashionable dresses that bring elegance and comfort to every occasion.</p>
+          <a href="#shop" class="btn"  data-aos="fade-down-left">Shop Now</a>
+        </div>
+      </section>
+
+      <section class="shop-section" id="shop">
+        <h2 id="collection" data-aos="fade-up">Shop Latest Dresses</h2>
+        <p>Discover the perfect outfits for boys and girls at unbeatable prices!</p>
+        <div class="cards-container">
+          <!-- Card 1 - Boy's Dress -->
+          <div class="card">
+            <img src="Boy's Casual Shirt.jpg" alt="Boy Dress 1">
+            <div class="card-content">
+              <h3 class="card-title">Boy's Casual Shirt</h3>
+              <p>
+                <span class="price">$40</span>
+                <span class="discount-price">$30</span>
+              </p>
+              <span class="offer">25% Off</span>
+              <a href="buy.html" class="btn">Buy Now</a>
+            </div>
+          </div>
+      
+          <!-- Card 2 - Boy's Dress -->
+          <div class="card">
+            <img src="Boy's Party Suit.jpg" alt="Boy Dress 2">
+            <div class="card-content">
+              <h3 class="card-title">Boy's Party Suit</h3>
+              <p>
+                <span class="price">$60</span>
+                <span class="discount-price">$45</span>
+              </p>
+              <span class="offer">25% Off</span>
+              <a href="buy.html" class="btn">Buy Now</a>            </div>
+          </div>
+      
+          <!-- Card 3 - Boy's Dress -->
+          <div class="card">
+            <img src="Boy's Denim Jacket.jpg" alt="Boy Dress 3">
+            <div class="card-content">
+              <h3 class="card-title">Boy's Denim Jacket</h3>
+              <p>
+                <span class="price">$50</span>
+                <span class="discount-price">$38</span>
+              </p>
+              <span class="offer">24% Off</span>
+              <a href="buy.html" class="btn">Buy Now</a>            </div>
+          </div>
+      
+          <!-- Card 3 - Boy's Dress -->
+          <div class="card">
+            <img src="Boy's Casual Shirt.jpg" alt="Boy Dress 3">
+            <div class="card-content">
+              <h3 class="card-title">Boy's Denim Jacket</h3>
+              <p>
+                <span class="price">$50</span>
+                <span class="discount-price">$38</span>
+              </p>
+              <span class="offer">24% Off</span>
+              <a href="buy.html" class="btn">Buy Now</a>            </div>
+          </div>
+      
+          <!-- Card 4 - Girl's Dress -->
+          <div class="card">
+            <img src="Girl's Summer Dress.jpg" alt="Girl Dress 1">
+            <div class="card-content">
+              <h3 class="card-title">Girl's Summer Dress</h3>
+              <p>
+                <span class="price">$35</span>
+                <span class="discount-price">$25</span>
+              </p>
+              <span class="offer">28% Off</span>
+              <a href="buy.html" class="btn">Buy Now</a>            </div>
+          </div>
+      
+          <!-- Card 5 - Girl's Dress -->
+          <div class="card">
+            <img src="Girl's Party Gown.jpg" alt="Girl Dress 2">
+            <div class="card-content">
+              <h3 class="card-title">Girl's Party Gown</h3>
+              <p>
+                <span class="price">$70</span>
+                <span class="discount-price">$50</span>
+              </p>
+              <span class="offer">29% Off</span>
+              <a href="buy.html" class="btn">Buy Now</a>            </div>
+          </div>
+      
+          <!-- Card 6 - Girl's Dress -->
+          <div class="card">
+            <img src="Girl's Casual Top.jpg" alt="Girl Dress 3">
+            <div class="card-content">
+              <h3 class="card-title">Girl's Casual Top</h3>
+              <p>
+                <span class="price">$25</span>
+                <span class="discount-price">$18</span>
+              </p>
+              <span class="offer">28% Off</span>
+              <a href="buy.html" class="btn">Buy Now</a>            </div>
+          </div>
+        </div>
+    
+      </section>
+
+
+      <section class="collections-section" >
+        <h2 id="collection" data-aos="fade-up">Our Collections</h2>
+        <p >Explore exclusive collections tailored for every style and occasion.</p>
+        <div class="collection-grid">
+          <!-- Collection 1 -->
+          <div class="collection-card">
+            <img src="Summer Collection.webp" alt="Summer Collection">
+            <div class="collection-content">
+              <h3 class="collection-title">Summer Collection</h3>
+              <p class="collection-description">Breezy styles to keep you cool and chic this summer.</p>
+              <a href="collection.html" class="btn">Shop Now</a>
+            </div>
+          </div>
+      
+          <!-- Collection 2 -->
+          <div class="collection-card">
+            <img src="Party Wear.webp" alt="Party Wear">
+            <div class="collection-content">
+              <h3 class="collection-title">Party Wear</h3>
+              <p class="collection-description">Elegant outfits to make every occasion special.</p>
+              <a href="collection.html" class="btn">Shop Now</a>            </div>
+          </div>
+      
+          <!-- Collection 3 -->
+          <div class="collection-card">
+            <img src="Kids' Collection.jpg" alt="Kids' Collection">
+            <div class="collection-content">
+              <h3 class="collection-title">Kids' Collection</h3>
+              <p class="collection-description">Adorable styles for the little ones.</p>
+              <a href="collection.html" class="btn">Shop Now</a>            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Offer Section -->
+<section class="offer-section">
+    <h2 class="offer-title" id="collection" data-aos="fade-up">Exclusive Offer: Flat 50% Off!</h2>
+    <p class="offer-description">Grab your favorite outfits at half the price. Limited time only!</p>
+  
+    <!-- Countdown Timer -->
+    <div class="countdown-timer" id="countdown">00d 00h 00m 00s</div>
+  
+    <!-- Offer Button -->
+    <a href="#" class="offer-btn" onclick="showModal()">View Details</a>
+  
+    <!-- Newsletter -->
+    <div class="newsletter">
+      <p>Subscribe to get updates on future deals:</p>
+      <form action="#">
+        <input type="email" placeholder="Enter your email" required>
+        <button type="submit">Subscribe</button>
+      </form>
+    </div>
+  </section>
+  
+  <!-- Modal -->
+  <div class="modal-overlay" id="modal-overlay"></div>
+  <div class="modal" id="offer-modal">
+    <h3>Offer Details</h3>
+    <p>This offer is valid for all users until February 10, 2025. Shop now to save big!</p>
+    <button class="close-modal" onclick="closeModal()">Close</button>
+  </div>
+  
+
+  <!-- About Us Section -->
+<section class="about-section" id="about">
+    <h2 class="about-title" id="collection" data-aos="fade-up">About Us</h2>
+    <div class="about-content">
+      <h3 id="collection" data-aos="fade-up">Welcome to Alpha Dress Shop</h3>
+      <p>
+        We are passionate about offering the latest fashion trends for all occasions. Our mission is to provide
+        quality dresses with exceptional service. Explore our collection and find the perfect outfit tailored
+        just for you.
+      </p>
+    </div>
+    
+    <!-- Features -->
+    <div class="features-grid">
+      <div class="feature-card">
+        <div class="feature-icon">🚚</div>
+        <h4 class="feature-title">Fast Delivery</h4>
+        <p>We offer worldwide shipping with quick and reliable delivery services.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">💳</div>
+        <h4 class="feature-title">Multiple Payment Options</h4>
+        <p>Pay securely using credit cards, debit cards, PayPal, or cash on delivery.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">💎</div>
+        <h4 class="feature-title">Premium Quality</h4>
+        <p>Our dresses are crafted with the finest materials to ensure the best quality.</p>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Team Section -->
+  <section class="team-section">
+    <h3>Meet Our Team</h3>
+    <div class="team-grid">
+    <h3 class="review-title" >Customer Reviews</h3>
+      <div class="team-card" id="collection" data-aos="fade-up">
+        <img src="team.jpg" alt="Team Member" >
+        <h4>Jane Doe</h4>
+        <p>Founder & CEO</p>
+      </div>
+      <div class="team-card"  id="collection" data-aos="fade-up">
+        <img src="team2.jpg" alt="Team Member">
+        <h4>John Smith</h4>
+        <p>Head Designer</p>
+      </div>
+      <div class="team-card"  id="collection" data-aos="fade-up">
+        <img src="team3.jpg" alt="Team Member">
+        <h4>Emily White</h4>
+        <p>Marketing Manager</p>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Review Section -->
+  <section class="review-section">
+    <h3 class="review-title">Customer Reviews</h3>
+    <div class="review">
+      <h4>⭐⭐⭐⭐⭐ - Sarah</h4>
+      <p>"The dresses are beautiful and the quality is outstanding. Highly recommend!"</p>
+    </div>
+    <div class="review">
+      <h4>⭐⭐⭐⭐ - Daniel</h4>
+      <p>"Great variety of styles. Delivery was on time, and the service was excellent."</p>
+    </div>
+  </section>
+
+<!-- Contact Section -->
+<section class="contact-section" id="contact">
+  <h2 class="contact-heading">Get in Touch</h2>
+  <p>We’d love to hear from you! Sign up or log in to reach out.</p>
+
+  <!-- 3D Form Container -->
+  <div class="form-container">
+    <div class="form-box" id="formBox">
+      <!-- Sign Up Form -->
+      <div class="form-content signup-form">
+        <h3 class="form-title">Sign Up</h3>
+        <div class="form-group">
+          <label for="signup-name">Name</label>
+          <input type="text" id="signup-name" placeholder="Enter your name" required>
+        </div>
+        <div class="form-group">
+          <label for="signup-email">Email</label>
+          <input type="email" id="signup-email" placeholder="Enter your email" required>
+        </div>
+        <div class="form-group">
+          <label for="signup-password">Password</label>
+          <input type="password" id="signup-password" placeholder="Enter your password" required>
+        </div>
+        <button class="form-btn" onclick="showPopup()">Sign Up</button>
+        <p class="toggle-btn" onclick="toggleForm()">Already have an account? Log In</p>
+      </div>
+
+      <!-- Log In Form -->
+      <div class="form-content login-form">
+        <h3 class="form-title">Log In</h3>
+        <div class="form-group">
+          <label for="login-email">Email</label>
+          <input type="email" id="login-email" placeholder="Enter your email" required>
+        </div>
+        <div class="form-group">
+          <label for="login-password">Password</label>
+          <input type="password" id="login-password" placeholder="Enter your password" required>
+        </div>
+        <button class="form-btn">Log In</button>
+        <p class="toggle-btn" onclick="toggleForm()">Don't have an account? Sign Up</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Popup -->
+<div id="popup" class="popup hidden">
+  <div class="popup-content">
+    <span class="close-btn" onclick="hidePopup()">&times;</span>
+    <h3>Thank you for signing up!</h3>
+    <p>Your account has been created successfully.</p>
+  </div>
+</div>
+
+<!-- Styles -->
+<style>
+  .popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    border-radius: 10px;
+    z-index: 1000;
+    width: 300px;
+    text-align: center;
+  }
+
+  .popup.hidden {
+    display: none;
+  }
+
+  .popup-content {
+    position: relative;
+  }
+
+  .close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    font-size: 20px;
+    color: #333;
+  }
+
+  .popup h3 {
+    margin-bottom: 10px;
+  }
+
+  .popup p {
+    margin: 0;
+  }
+
+  /* Background overlay */
+  .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+  }
+</style>
+
+<!-- JavaScript -->
+<script>
+  function showPopup() {
+    document.getElementById("popup").classList.remove("hidden");
+  }
+
+  function hidePopup() {
+    document.getElementById("popup").classList.add("hidden");
+  }
+
+  function toggleForm() {
+    const formBox = document.getElementById("formBox");
+    formBox.classList.toggle("flipped");
+  }
+</script>
+
+
+
+  
+
+    <!-- Footer Section -->
+<footer class="footer">
+    <div class="footer-container">
+      <!-- About Us -->
+      <div class="footer-about">
+        <h3>About Us</h3>
+        <p>
+          We bring you the finest collection of dresses, combining quality, comfort, and style. 
+          Shop with us for a seamless experience and trendy outfits for every occasion.
+        </p>
+      </div>
+  
+      <!-- Quick Links -->
+      <div class="footer-links">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#shop">Shop</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+  
+      <!-- Contact Info -->
+      <div class="footer-contact">
+        <h3>Contact Us</h3>
+        <p>Email: support@yourshop.com</p>
+        <p>Phone: +123-456-7890</p>
+        <p>Address: 123 Fashion Street, Style City, SC 56789</p>
+      </div>
+  
+      <!-- Social Media -->
+      <div class="footer-social">
+        <h3>Follow Us</h3>
+        <div class="social-icons">
+          <a href="#"><img src="https://img.icons8.com/ios-filled/50/ffffff/facebook.png" alt="Facebook"></a>
+          <a href="#"><img src="https://img.icons8.com/ios-filled/50/ffffff/twitter.png" alt="Twitter"></a>
+          <a href="#"><img src="https://img.icons8.com/ios-filled/50/ffffff/instagram-new.png" alt="Instagram"></a>
+          <a href="#"><img src="https://img.icons8.com/ios-filled/50/ffffff/linkedin.png" alt="LinkedIn"></a>
+        </div>
+      </div>
+    </div>
+  
+    <!-- Footer Bottom -->
+    <div class="footer-bottom">
+      <p>&copy; 2025 Your Shop Name. All Rights Reserved.</p>
+    </div>
+  </footer>
+</div>
+<!-- Add this in your <head> section for SweetAlert2 -->
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+<!-- Your existing contact section remains the same -->
+
+
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>
+  AOS.init({
+    duration: 1000,
+  });
+</script>
+    <script src="script.js"></script>
+</body>
+</html>

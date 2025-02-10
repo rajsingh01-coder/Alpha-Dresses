@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dress Collection</title>
+  <style>
+    /* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f9;
+}
+
+header {
+  background-color: #ff7f50;
+  color: #fff;
+  text-align: center;
+  padding: 1rem 0;
+}
+
+header h1 {
+  margin: 0;
+}
+
+.filter-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin: 1rem 0;
+}
+
+.filter-section select {
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+main {
+  padding: 1rem;
+}
+
+.dress-section {
+  margin-bottom: 2rem;
+}
+
+.dress-section h2 {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.dress-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1rem;
+}
+
+.card {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 1rem;
+  text-align: center;
+}
+
+.card img {
+  max-width: 100%;
+  border-radius: 10px;
+}
+
+.card .price {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin: 0.5rem 0;
+}
+
+.card button {
+  padding: 0.5rem 1rem;
+  background-color: #28a745;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.card button:hover {
+  background-color: #218838;
+}
+.footer {
+      background-color: #333;
+      color: white;
+      padding: 40px 20px;
+      text-align: center;
+      margin-top: 30rem;
+    }
+  
+    .footer-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+  
+    .footer h3 {
+      margin-bottom: 15px;
+      font-size: 1.5rem;
+      color: #ff6f61;
+    }
+  
+    .footer p {
+      font-size: 0.9rem;
+      color: #ccc;
+      line-height: 1.6;
+    }
+  
+    .footer-links ul {
+      list-style: none;
+      padding: 0;
+    }
+  
+    .footer-links li {
+      margin-bottom: 10px;
+    }
+  
+    .footer-links a {
+      text-decoration: none;
+      color: #ccc;
+      font-size: 0.9rem;
+      transition: color 0.3s;
+    }
+  
+    .footer-links a:hover {
+      color: #ff6f61;
+    }
+  
+    .social-icons {
+      margin-top: 10px;
+    }
+  
+    .social-icons a {
+      margin: 0 5px;
+      display: inline-block;
+    }
+  
+    .social-icons img {
+      width: 30px;
+      height: 30px;
+      transition: transform 0.3s;
+    }
+  
+    .social-icons img:hover {
+      transform: scale(1.2);
+    }
+  
+    .footer-bottom {
+      margin-top: 20px;
+      font-size: 0.8rem;
+      color: #ccc;
+      border-top: 1px solid #444;
+      padding-top: 10px;
+    }
+   
+
+/* Responsive Media Queries */
+@media (max-width: 768px) {
+  .dress-cards {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  }
+}
+
+@media (max-width: 480px) {
+  .filter-section {
+    flex-direction: column;
+  }
+
+  .dress-cards {
+    grid-template-columns: 1fr;
+  }
+}
+
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Dress Collection</h1>
+    <div class="filter-section">
+      <label for="categoryFilter">Filter by Category:</label>
+      <select id="categoryFilter" onchange="filterByCategory()">
+        <option value="all">All</option>
+        <option value="summer-dresses">Summer Dresses</option>
+        <option value="party-dresses">Party Dresses</option>
+        <option value="kids-dresses">Kids Dresses</option>
+        <option value="winter-dresses">Winter Dresses</option>
+      </select>
+    </div>
+  </header>
+
+  <main>
+    <section id="summer-dresses" class="dress-section">
+      <h2>Summer Dresses</h2>
+      <div class="dress-cards"></div>
+    </section>
+
+    <section id="party-dresses" class="dress-section">
+      <h2>Party Dresses</h2>
+      <div class="dress-cards"></div>
+    </section>
+
+    <section id="kids-dresses" class="dress-section">
+      <h2>Kids Dresses</h2>
+      <div class="dress-cards"></div>
+    </section>
+
+    <section id="winter-dresses" class="dress-section">
+      <h2>Winter Dresses</h2>
+      <div class="dress-cards"></div>
+    </section>
+  </main>
+  <footer class="footer">
+    <div class="footer-container">
+      <!-- About Us -->
+      <div class="footer-about">
+        <h3>About Us</h3>
+        <p>
+          We bring you the finest collection of dresses, combining quality, comfort, and style. 
+          Shop with us for a seamless experience and trendy outfits for every occasion.
+        </p>
+      </div>
+  
+      <!-- Quick Links -->
+      <div class="footer-links">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="index.html">About Us</a></li>
+          <li><a href="index.html">Shop</a></li>
+          <li><a href="index.html">Contact</a></li>
+        </ul>
+      </div>
+  
+      <!-- Contact Info -->
+      <div class="footer-contact">
+        <h3>Contact Us</h3>
+        <p>Email: support@yourshop.com</p>
+        <p>Phone: +123-456-7890</p>
+        <p>Address: 123 Fashion Street, Style City, SC 56789</p>
+      </div>
+  
+      <!-- Social Media -->
+      <div class="footer-social">
+        <h3>Follow Us</h3>
+        <div class="social-icons">
+          <a href="#"><img src="https://img.icons8.com/ios-filled/50/ffffff/facebook.png" alt="Facebook"></a>
+          <a href="#"><img src="https://img.icons8.com/ios-filled/50/ffffff/twitter.png" alt="Twitter"></a>
+          <a href="#"><img src="https://img.icons8.com/ios-filled/50/ffffff/instagram-new.png" alt="Instagram"></a>
+          <a href="#"><img src="https://img.icons8.com/ios-filled/50/ffffff/linkedin.png" alt="LinkedIn"></a>
+        </div>
+      </div>
+    </div>
+  
+    <!-- Footer Bottom -->
+    <div class="footer-bottom">
+      <p>&copy; 2025 Your Shop Name. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+ <script>
+    const dressData = {
+  "summer-dresses": [
+    { id: 1, name: "Floral Maxi Dress", price: 50, image: "1.avif" },
+    { id: 2, name: "Beach Sundress", price: 40, image: "2.avif" },
+    { id: 3, name: "Casual Summer Dress", price: 60, image: "3.avif" },
+    { id: 4, name: "Striped Summer Dress", price: 55, image: "4.avif" },
+    { id: 5, name: "Lightweight Dress", price: 45, image: "5.avif" },
+    { id: 6, name: "Sleeveless Dress", price: 70, image: "6.jpg" },
+    { id: 5, name: "Lightweight Dress", price: 45, image: "7.jpg" },
+    { id: 6, name: "Sleeveless Dress", price: 70, image: "8.jpg" },
+    { id: 2, name: "Beach Sundress", price: 40, image: "9.jpg" },
+    { id: 3, name: "Casual Summer Dress", price: 60, image: "10.jpg" },
+  ],
+  "party-dresses": [
+    { id: 1, name: "Black Evening Dress", price: 120, image: "Summer Collection.webp" },
+    { id: 2, name: "Sequin Party Dress", price: 150, image: "Party Wear.webp" },
+    { id: 3, name: "Velvet Cocktail Dress", price: 100, image: "2.avif" },
+    { id: 4, name: "Red Gown", price: 200, image: "9.jpg" },
+    { id: 5, name: "Golden Party Dress", price: 180, image: "6.jpg" },
+    { id: 6, name: "Elegant Black Dress", price: 170, image: "10.jpg" },
+  ],
+  "kids-dresses": [
+    { id: 1, name: "Polka Dot Dress", price: 30, image: "one.jpg" },
+    { id: 2, name: "Floral Kids Dress", price: 25, image: "two.jpg" },
+    { id: 3, name: "Summer Kids Dress", price: 35, image: "three.jpg" },
+    { id: 4, name: "Cute Tutu Dress", price: 40, image: "four.jpg" },
+    { id: 5, name: "Playful Outfit", price: 20, image: "five.jpg" },
+    { id: 6, name: "Stylish Frock", price: 50, image: "five.jpg" },
+    { id: 3, name: "Summer Kids Dress", price: 35, image: "four.jpg" },
+    { id: 4, name: "Cute Tutu Dress", price: 40, image: "three.jpg" },
+    { id: 5, name: "Playful Outfit", price: 20, image: "two.jpg" },
+    { id: 6, name: "Stylish Frock", price: 50, image: "one.jpg" },
+  ],
+  
+  "winter-dresses": [
+    { id: 1, name: "Cozy Sweater Dress", price: 80, image: "winter.jpg" },
+    { id: 2, name: "Woolen Maxi Dress", price: 90, image: "winter1.webp" },
+    { id: 3, name: "Thermal Winter Dress", price: 100, image: "winter3.jpg" },
+    { id: 4, name: "Knitted Dress", price: 85, image: "winter2.webp" },
+    { id: 5, name: "Long Winter Coat", price: 120, image: "3.avif" },
+    { id: 6, name: "Fleece Dress", price: 95, image: "Party Wear.webp" },
+    { id: 3, name: "Thermal Winter Dress", price: 100, image: "2.avif" },
+    { id: 4, name: "Knitted Dress", price: 85, image: "Summer Collection.webp" },
+    { id: 5, name: "Long Winter Coat", price: 120, image: "winter1.webp" },
+    { id: 6, name: "Fleece Dress", price: 95, image: "winter.jpg" },
+  ],
+  
+};
+
+function createCard(dress) {
+  return `
+    <div class="card">
+      <img src="${dress.image}" alt="${dress.name}">
+      <h3>${dress.name}</h3>
+      <p class="price">$${dress.price}</p>
+      <button>Add to Cart</button>
+    </div>
+  `;
+}
+
+function renderSection(sectionId, dresses) {
+  const section = document.querySelector(`#${sectionId} .dress-cards`);
+  section.innerHTML = dresses.map(createCard).join("");
+}
+
+function filterByCategory() {
+  const category = document.getElementById("categoryFilter").value;
+  document.querySelectorAll(".dress-section").forEach(section => {
+    section.style.display = category === "all" || section.id === category ? "" : "none";
+  });
+}
+
+// Render sections
+Object.keys(dressData).forEach(sectionId => renderSection(sectionId, dressData[sectionId]));
+
+ </script>
+</body>
+</html>
